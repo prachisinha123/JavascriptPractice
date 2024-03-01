@@ -1,0 +1,19 @@
+/* (*) means we apply all the proprties on every elements */
+*{
+    margin:0;
+    padding:;
+}
+html,body{
+    height:100%;
+    width:100%;
+    
+}
+nav{
+    display:flex;
+    background:rgb(211, 218, 218);
+
+}
+nav li{
+    list-style: none;
+    padding :0 23px;
+}

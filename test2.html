@@ -1,0 +1,32 @@
+.btn {
+    position: relative;
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the ripple effect stays within the button */
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust the color and opacity of the ripple effect */
+    border-radius: 50%;
+    transition: width 0.4s, height 0.4s, opacity 0.4s, transform 0.4s;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Ensure the ripple doesn't interfere with button clicks */
+  }
+  
+  .btn:hover::after {
+    width: 200%; /* Adjust the size of the ripple effect */
+    height: 200%; /* Adjust the size of the ripple effect */
+    opacity: 0; /* Fade out the ripple effect */
+  }
